@@ -1,0 +1,114 @@
+.about-wrapper {
+  display: flex;
+  align-items: center;
+  gap: 60px;
+}
+
+.about-image {
+  flex: 1;
+}
+
+.image-container {
+  position: relative;
+  border-radius: var(--border-radius);
+  overflow: hidden;
+}
+
+.image-container img {
+  width: 100%;
+  border-radius: var(--border-radius);
+  object-fit: cover;
+  min-height: 400px;
+}
+
+.image-card {
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translate(-50%, 50%);
+  background-color: var(--white);
+  padding: 30px;
+  border-radius: var(--border-radius);
+  box-shadow: var(--shadow-md);
+  width: 85%;
+  text-align: center;
+  transition: var(--transition);
+}
+
+/* Adjust wrapper to account for overlapping card */
+.about-wrapper {
+  padding-bottom: 80px;
+}
+
+.image-card h4 {
+  font-size: 1.1rem;
+  margin-bottom: 12px;
+}
+
+.image-card p {
+  font-size: 0.9rem;
+  color: var(--text-light);
+}
+
+.about-content {
+  flex: 1;
+}
+
+.about-desc {
+  color: var(--text-light);
+  margin-bottom: 40px;
+  font-size: 1.1rem;
+}
+
+.philosophy-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 30px;
+}
+
+.philosophy-item {
+  display: flex;
+  gap: 16px;
+}
+
+.step-number {
+  background-color: var(--primary);
+  color: var(--white);
+  width: 36px;
+  height: 36px;
+  border-radius: 4px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 600;
+  font-size: 0.9rem;
+  flex-shrink: 0;
+}
+
+.philosophy-item h4 {
+  font-size: 1rem;
+  margin-bottom: 8px;
+}
+
+.philosophy-item p {
+  font-size: 0.9rem;
+  color: var(--text-light);
+}
+
+@media (max-width: 992px) {
+  .about-wrapper {
+    flex-direction: column;
+    gap: 100px;
+  }
+}
+
+@media (max-width: 600px) {
+  .philosophy-grid {
+    grid-template-columns: 1fr;
+  }
+  
+  .image-card {
+    width: 95%;
+    padding: 20px;
+  }
+}
